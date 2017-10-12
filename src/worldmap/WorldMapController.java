@@ -47,8 +47,8 @@ public class WorldMapController implements Initializable {
 
   @FXML
   private void canvasClick(MouseEvent event) {
-    drawBorder(gc);
-    drawTriangles(gc);
+//    drawBorder(gc);
+//    drawTriangles(gc);
     drawHexes(gc);
   }
 
@@ -258,7 +258,7 @@ public class WorldMapController implements Initializable {
     }
     //</editor-fold>
     gc.setStroke(Color.BLACK);
-    gc.setLineWidth(1);
+    gc.setLineWidth(0.5);
 
     gc.strokeText("100km Hexes", 10, 10);
     gc.strokeLine(A, h * 2.5, B, h * 0);
@@ -305,8 +305,8 @@ public class WorldMapController implements Initializable {
 
   private void draw() {
     drawBorder(gc);
-    drawTriangles(gc);
     drawHexes(gc);
+    drawTriangles(gc);
   }
 
   @FXML
